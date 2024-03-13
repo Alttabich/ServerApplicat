@@ -1,0 +1,48 @@
+﻿<Window x:Class="ServerApplicat.Auth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServerApplicat"
+        mc:Ignorable="d"
+        Title="Auth" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="2" Margin="176,92,179.6,91.4" Width="438" Text="  Пожалуйста, подключитесь к серверу MySql"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Margin="20,0,0,0">
+                Адрес сервера:
+            </TextBlock>
+            <TextBox x:Name="_ip" Margin="20,10,20,20">
+
+            </TextBox>
+            <TextBlock Margin="20,0,0,0">
+                Порт сервера:
+            </TextBlock>
+            <TextBox x:Name="_port" Width="100" HorizontalAlignment="Left" Margin="20,10,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Margin="20,0,0,0">
+                Логин
+            </TextBlock>
+            <TextBox x:Name="_login" Margin="20,10,20,20">
+
+            </TextBox>
+            <TextBlock Margin="20,0,0,0">
+                Пароль
+            </TextBlock>
+            <PasswordBox x:Name="_password" Margin="20,10,20,20"/>
+        </StackPanel>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" x:Name="auth" Click="auth_Click">
+            Подключиться
+        </Button>
+    </Grid>
+</Window>
